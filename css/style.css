@@ -1,0 +1,250 @@
+:root {
+    --blue: #521cfb;
+    --purple: #834dfc;
+    --purple-soft: #a07cfe;
+    --green: #1cb87f;
+    --yellow: #e1a42a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-family: 'Muli', sans-serif;
+    color: white;
+}
+
+.body-index {
+    /* background-color: var(--purple); */
+    background-image: url("https://images.pexels.com/photos/5338522/pexels-photo-5338522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-container-logo {
+    width: 20rem;
+}
+
+.header-nav {
+    position: relative;
+}
+
+.header-nav__container-icon {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 4rem;
+    text-align: center;
+}
+
+.header-nav__container-menu {
+    display: none;
+    width: 10rem;
+    position: absolute;
+    list-style: none;
+    text-align: right;
+    left: -6rem;
+}
+
+.header-nav:hover ul,  ul:hover {
+    display: block;
+}
+
+.header-menu__item {
+    margin: 1rem 0;
+}
+
+.header-menu__item a:hover {
+    border-bottom: 3px dotted white;
+}
+
+.my-movies {
+    margin-left: 3rem;
+}
+
+.main-bar-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 70%;
+    height: 20rem;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main-bar__titile {
+    font-size: 2.5rem;
+
+}
+
+.main-bar__input {
+    width: 100%;
+    height: 4rem;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    background-color: rgba(73, 99, 124, 0.5);
+    border-radius: 2.5rem;
+    outline: none;
+}
+
+.main-bar__input::placeholder {
+    color: white;
+}
+
+.main-carousel {
+    width: 100%;
+    position: relative;
+    padding: 3rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.main-carousel::-webkit-scrollbar {
+    background-color: transparent;
+    height: 10px;
+}
+
+.main-carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.carousel__container {
+    align-items: center;
+    margin: 7rem 0;
+    white-space: nowrap;
+}
+
+.carousel-item {
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    display: inline-block;
+    margin: auto 0;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel-item__img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.carousel-item__details {
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    padding: 10px;
+    font-size: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0, 0.9) 100%);
+    opacity: 0;
+    transition: 450ms opacity;
+}
+
+.carousel-item:hover .carousel-item__details {
+    opacity: 1;
+    transition: 450ms opacity;
+}
+
+.carousel-item__details div {
+    width: 50%;
+    height: auto;
+}
+
+.carousel-item__details img {
+    width: 20%;
+    height: auto;
+}
+
+.carousel-item__details img:hover{
+    transform: scale(1.2);
+}
+
+.carousel-item__details p:hover{
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 10rem;
+    width: 100%;
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.login-container a {
+    text-align: center;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 480px) {
+
+    footer {
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
